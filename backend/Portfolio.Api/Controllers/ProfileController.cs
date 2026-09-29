@@ -4,19 +4,26 @@ namespace Portfolio.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProfileController : ControllerBase
+public class SkillsController : ControllerBase
 {
     [HttpGet]
-    public IActionResult GetProfile()
+    public IActionResult GetSkills()
     {
-        var profile = new
+        var skills = new[]
         {
-            Name = "Tad",
-            Title = "Software Engineer | Full Stack Developer",
-            Location = "Texas",
-            Summary = "Full Stack Developer specializing in React, .NET and modern web applications."
+            "React",
+            "Angular",
+            "TypeScript",
+            "JavaScript",
+            "C#",
+            ".NET",
+            "ASP.NET Core",
+            "Java",
+            "REST APIs",
+            "PostgreSQL",
+            "Git"
         };
 
-        return Ok(profile);
+        return Ok(skills);
     }
 }
