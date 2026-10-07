@@ -1,0 +1,6 @@
+# Ignore generated .NET build output
+**/bin/
+**/obj/
+
+# Ignore editor/request files that are not source changes
+*.http
