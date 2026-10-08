@@ -1,12 +1,8 @@
 import './App.css'
+import Skills from './components/Skills';
 
 function App() {
-
-  return (
-    <>
-      <h1>Welcome to My Portfolio</h1>
-    </>
-  )
+  return <Skills />;
 }
 
-export default App
+export default App;
