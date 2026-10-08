@@ -1,5 +1,5 @@
 import './App.css'
-import Skills from './components/Skills';
+import Skills from './components/skill-component/Skills';
 
 function App() {
   return <Skills />;
