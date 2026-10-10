@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace Portfolio.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api")]
 public class SkillsController : ControllerBase
 {
-    [HttpGet]
+    [HttpGet("skills")]
     public IActionResult GetSkills()
     {
         var skills = new[]
