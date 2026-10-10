@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.Api.Models;
 
 namespace Portfolio.Api.Controllers;
 
@@ -7,24 +8,8 @@ namespace Portfolio.Api.Controllers;
 public class ProjectsController : ControllerBase
 {
     [HttpGet]
-    public IActionResult GetProjects()
+    public ActionResult<IReadOnlyList<ProjectContent>> GetProjects()
     {
-        var projects = new[]
-        {
-            new
-            {
-                Name = "My Portfolio",
-                Description = "A full-stack portfolio application built with React, .NET and PostgreSQL.",
-                Technologies = new[]
-                {
-                    "React",
-                    "TypeScript",
-                    ".NET",
-                    "PostgreSQL"
-                }
-            }
-        };
-
-        return Ok(projects);
+        return Ok(PortfolioContent.Projects);
     }
 }

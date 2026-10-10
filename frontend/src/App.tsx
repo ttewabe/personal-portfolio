@@ -1,8 +1,7 @@
-import './App.css'
-import Skills from './components/skill-component/Skills';
+import MainComponent from './components/portfolio/MainComponent';
 
 function App() {
-  return <Skills />;
+  return <MainComponent />;
 }
 
 export default App;
