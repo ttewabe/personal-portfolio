@@ -54,7 +54,7 @@ function Home() {
         </Greeting>
       </Intro>
       <Rule />
-      <VerticalRule aria-hidden="true" />
+      <VerticalRule $short aria-hidden="true" />
       <ActionGrid className="row button-row grid-container">
         <ActionItem className="col-sm-2 grid-item">
           <a className="button-row-grid" href="#about">
