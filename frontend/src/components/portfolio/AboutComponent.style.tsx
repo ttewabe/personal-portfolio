@@ -13,12 +13,19 @@ export const AboutTrigger = styled.button`
 export const AboutModal = styled(Modal)`
   .modal-content {
     min-height: min(80vh, 700px);
-    background: var(--bg);
-    color: var(--text);
+   background: #242835;
+    color: #fcfbfb;
+    font-size: 25px;
+    font-weight: 700;
+    height: 80%;
+    margin: 10px 5px;
+    width: 100%;
   }
 
   .modal-header {
-    color: var(--text-h);
+   color: #f0d0a0;
+    font-size: 35px;
+    font-weight: 900;
   }
 `;
 
