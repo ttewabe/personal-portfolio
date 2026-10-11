@@ -15,7 +15,7 @@ export const HomeContainer = styled.main`
     align-items: center;
     width: 182px;
     height: 182px;
-    margin: 60px auto 0;
+    margin: -15px auto 0;
     padding: 0;
     overflow: hidden;
     border: 2px dashed #959292;
@@ -44,42 +44,49 @@ export const VerticalRule = styled.div<{ $short?: boolean }>`
   width: 1px;
   height: ${({ $short }) => ($short ? '60px' : '75px')};
   margin: 0 auto;
-  background: var(--border);
+  // background: var(--border);
+  border:  1.5px solid var(--border);
+  box-shadow: 10px 10px 10px rgba(6, 6, 6, 0.1);
 `;
 
 export const Rule = styled.hr`
   width: 100%;
   margin: 0 auto;
-  border: 0;
-  border-top: 1px solid var(--border);
-  opacity: 1;
+  border:  1.5px solid var(--border);
+  opacity:1;
+   box-shadow: 10px 10px 10px rgba(151, 151, 151, 0.1);
 `;
 
 export const Intro = styled.section`
-   padding: 1rem 0;
+    padding: 8px 0 100px 0;
   text-align: center;
 
   @media (max-width: 576px) {
-     padding: 28px 0 52px;
+     padding: 8px 0 50px 0;
   }
 `;
 
 export const Greeting = styled.p`
   margin: 0;
-  font-size: clamp(1rem, 2vw, 1.08rem);
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  line-height: 1.8;
 
   strong {
-    color: var(--text-h);
+    color: white;
     font-size: clamp(1.45rem, 3vw, 2rem);
     font-weight: 900;
-    letter-spacing: 0.15em;
+    letter-spacing: 2px;
   }
+    span{
+     color: #e9d5b8;
+    font-size: 24px;
+    margin: 10px 0
+    letter-spacing: 2px;
+    }
 
   .typical-tt {
-    color: var(--text);
+    color: #e9d5b8;
+    font-size: 24px;
+    margin: 10px 0
+    letter-spacing: 2px;
   }
 
   @media (max-width: 576px) {
@@ -97,7 +104,8 @@ export const ActionGrid = styled.nav`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  border: 1px solid var(--border);
+  border:  2px solid var(--border);
+   box-shadow: 10px 10px 10px rgba(151, 151, 151, 0.1);
 
   a {
     display: flex;
@@ -107,13 +115,15 @@ export const ActionGrid = styled.nav`
     color: var(--text);
     text-decoration: none;
     font-weight: 750;
-    letter-spacing: 0.04em;
+    color: #e9d5b8;
+    font-size: 23px;
+    letter-spacing: 2px
     transition: background-color 150ms ease, color 150ms ease;
 
     &:hover,
     &:focus-visible {
-      background: rgba(232, 220, 198, 0.12);
-      color: var(--text-h);
+      background: #e9d5b8;
+      color: black;
     }
   }
 
