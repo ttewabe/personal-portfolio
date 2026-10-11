@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Form, FormGroup, ModalBody, ModalHeader } from 'reactstrap';
-import LoadingSpinner from '../LoadingSpinner';
 import { hasSkillsDetailsData, isSkillsDetails } from '../../api/portfolio';
 import { useApiResource } from '../../api/useApiResource';
 import {
@@ -71,7 +70,7 @@ function Skill() {
               </Form>
             </SkillContent>
           ) : (
-            <LoadingSpinner />
+            <p role="status">Loading...</p>
           )}
         </ModalBody>
       </SkillModal>

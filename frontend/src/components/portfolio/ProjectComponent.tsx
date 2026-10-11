@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ModalBody, ModalHeader } from 'reactstrap';
-import LoadingSpinner from '../LoadingSpinner';
 import { hasNonEmptyArray, isProjects } from '../../api/portfolio';
 import { useApiResource } from '../../api/useApiResource';
 import {
@@ -62,7 +61,7 @@ function Project() {
               </ProjectCard>
             ))
           ) : (
-            <LoadingSpinner />
+            <p role="status">Loading...</p>
           )}
         </ModalBody>
       </ProjectModal>

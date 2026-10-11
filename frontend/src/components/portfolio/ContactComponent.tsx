@@ -1,5 +1,4 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
-import LoadingSpinner from '../LoadingSpinner';
 import { hasContactData, isContactInfo } from '../../api/portfolio';
 import { useApiResource } from '../../api/useApiResource';
 import {
@@ -84,7 +83,7 @@ function Contact() {
               {contact ? (
                 <ContactIntro className="col mb-3">{contact.intro}</ContactIntro>
               ) : (
-                <LoadingSpinner />
+                <p role="status">Loading...</p>
               )}
             </div>
           </div>
@@ -172,7 +171,7 @@ function Contact() {
                   </a>
                 ))
               ) : (
-                <LoadingSpinner />
+                <p role="status">Loading...</p>
               )}
             </SocialLinks>
           </div>

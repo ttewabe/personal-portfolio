@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import LoadingSpinner from '../LoadingSpinner';
 import { hasProfileData, isProfile } from '../../api/portfolio';
 import { useApiResource } from '../../api/useApiResource';
 import { ModalBody, ModalHeader } from 'reactstrap';
@@ -39,7 +38,7 @@ function About() {
               ))}
             </AboutContent>
           ) : (
-            <LoadingSpinner />
+            <p role="status">Loading...</p>
           )}
         </ModalBody>
       </AboutModal>

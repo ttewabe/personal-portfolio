@@ -1,5 +1,4 @@
 import { ReactTyped } from 'react-typed';
-import LoadingSpinner from '../LoadingSpinner';
 import { hasProfileData, isProfile } from '../../api/portfolio';
 import { useApiResource } from '../../api/useApiResource';
 import About from './AboutComponent';
@@ -22,7 +21,7 @@ function Home() {
   const profile = useApiResource('/profile', isProfile, hasProfileData);
 
   if (!profile) {
-    return <LoadingSpinner />;
+    return <p role="status">Loading...</p>;
   }
 
   return (
